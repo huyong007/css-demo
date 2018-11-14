@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>es6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function newName(item) {
+        console.log(item.nickname.length);
+        let newStr = item.nickname.length > 3 ? item.nickname.slice(0, 3) + '...' : item.nickname
+        console.log(newStr);
+    }
+    newName({ nickname: '回良玉 v 说' })
+    // let str = 'order.png'
+    // let pattern = /\./
+    // console.log(pattern.exec(str).index);
+    // console.log(str.slice(pattern.exec(str).index));
+    console.log('---------------');
+    var myRe = /d(b+)d/g;
+    var myArray = myRe.exec("cdbbdbsbz");
+    console.log(myArray);
+    console.log('---------------');
+    var re = /(\w+)\s(\w+)/;
+    var str = "John Smith";
+    var newstr = str.replace(re, "$2, $1");
+    console.log(newstr);
+    console.log('---------------');
+    function classof(item) {
+        if (item === undefined) return undefined;
+        if (item === null) return null;
+        console.log(Object.prototype.toString.call(item).slice(8, -1));
+    }
+    classof('9:00')
+    console.log('---------------');
+    let o = { x: 1, y: { z: [false, null, ''] } };
+    let s = JSON.stringify(o);
+    console.log(s);
+    let p = JSON.parse(s);
+    console.log(p);
+    console.log('---------------');
+    let z = { x: 1, y: 1 }.toString();
+    console.log(z);
+    console.log('---------------');
+    +String(98878877801).split("").map(item => item = +item).sort(function (a, b) { return b - a }).join('')
+    console.log(typeof y);
+    console.log('---------------');
+    var variable = 9;
+    variables = 10;
+    console.log(variable);
+    console.log(variables);
+    delete variable;
+    delete variables;
+    console.log(variable);
+    console.log(this.variables);
+    console.log('---------------');
+    jsstring = "var deux = 2; console.log(deux);";
+    new Function(jsstring)();
+    eval(jsstring);
+    console.log(String("08 hello"));
+    console.log(parseInt('08 hello'));
+    // 编码规范 http://www.cnblogs.com/TomXu/archive/2011/12/28/2286877.html
+    
+    
+
+
+
+
+</script>
