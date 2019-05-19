@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style> 
-     .pulse {
-       height:100px;
-       width:30px;
-       position:absolute;
-       left:50%;
-       top:50%;
-       animation:pulsate 1s ease-out;
 
-     }
-    </style>
-  </head>
-  <body>
-    <div class='pulse'>DEMO</div>
+<head>
+  <meta charset="utf-8" />
+  <title>Page Title</title>
 
-  </body>
+  <style>
+    .outer {
+  font-size: 0;
+}
+.fixed {
+    width:200px;
+}
+.fixed, .auto {
+    height:300px;
+    outline:solid 1px blue;
+    font-size: 24px;
+}
+
+.fixed {
+    display:inline-block;
+    vertical-align:top;
+}
+.auto {
+    margin-left:-200px;
+    padding-left:200px;
+    box-sizing:border-box;
+    width:100%;
+    display:inline-block;
+    vertical-align:top;
+}
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <div class="outer">
+    <div class="fixed">fixed</div>
+    <div class="auto">auto</div>
+</div>
+
+
+
+
+</body>
+
 </html>
