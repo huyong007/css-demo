@@ -6,6 +6,15 @@ radius = radius * 0.90;
 setInterval(drawClock, 1000);
 drawClock();
 
+// set clock background
+const imgs = new Image();
+imgs.src = './assets/imgs/bryan-garcia-1601400-unsplash.jpg';
+imgs.onload = drawClockBg;
+function drawClockBg() {
+    ctx.drawImage(imgs, -canvas.width, -canvas.height, 2 * canvas.width, 2 * canvas.height);
+
+}
+
 function drawClock() {
     ctx.arc(0, 0, radius, 0, 2 * Math.PI);
     ctx.fillStyle = 'white';
@@ -22,8 +31,8 @@ function drawFace(ctx, radius) {
     ctx.arc(0, 0, radius, 0, 2 * Math.PI);
     ctx.fillStyle = 'white';
     ctx.fill();
-
-    grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);
+    grad = ctx.createRadialGradient(0, 
+0, radius * 0.95, 0, 0, radius * 1.05);
     grad.addColorStop(0, '#333');
     grad.addColorStop(0.5, 'white');
     grad.addColorStop(1, '#333');
@@ -86,3 +95,5 @@ function drawHand(ctx, pos, length, width) {
     ctx.stroke();
     ctx.rotate(-pos);
 }
+
+
